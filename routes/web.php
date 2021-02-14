@@ -17,14 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/empleados',function(){
-    $empleado= Empleado::get();
-    return $empleado;
-});
 
-Route::post('empleados', function(){
-    return 'guardar Empleado';
-})
 // Route::get('productos', function(){
 //         return 'Lista de productos';
 // });

@@ -19,7 +19,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('apellidos');
             $table->integer('cedula');
             $table->String('email')->unique();
-            $table->String('lugar_nacimineto');
+            $table->String('lugar_nacimiento');
             $table->enum('sexo',['masculino','femenino','no especificado']);
             $table->enum('estado_civil',['soltero','casado','viudo']);
             $table->integer('telefono');
