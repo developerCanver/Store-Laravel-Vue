@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Empleado;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/empleados',function(){
+    $empleado= Empleado::get();
+    return $empleado;
+});
+
+Route::post('empleados', function(){
+    return 'guardar Empleado';
+})
+// Route::get('productos', function(){
+//         return 'Lista de productos';
+// });
+
+// Route::post('productos', function(){
+//     return 'almacenando productos';
+// });
+
+// Route::put('productos/{id}', function($id){ //{id} = pasando parametros
+//  return 'Actualizando Producto '.$id;
+// });
